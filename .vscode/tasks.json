@@ -1,0 +1,38 @@
+{
+    "tasks": [
+        {
+            "label": "make build",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "all",
+                "DIR=${relativeFileDirname}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build the active playground subject"
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean",
+                "DIR=${relativeFileDirname}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "detail": "Clean the active playground subject build directory"
+        }
+    ],
+    "version": "2.0.0"
+}
