@@ -1,10 +1,12 @@
 #include <raylib.h>
 
-int main(void) {
-    int virtualWidth = 240;
-    int virtualHeight = 360;
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
 
-    InitWindow(480, 720, "Viewport Scaling");
+int main(void) {
+    int virtualWidth = 480;
+    int virtualHeight = 720;
+
+    InitWindow(960, 1440, "Viewport Scaling");
     SetWindowState(FLAG_WINDOW_RESIZABLE);
 
     RenderTexture2D target = LoadRenderTexture(virtualWidth, virtualHeight);
